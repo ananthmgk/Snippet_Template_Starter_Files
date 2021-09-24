@@ -165,7 +165,7 @@ section .paragrph {
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:300px) {
     .navbar a {
         margin: 2px;
     }
