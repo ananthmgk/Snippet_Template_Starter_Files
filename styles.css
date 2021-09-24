@@ -53,6 +53,18 @@ header .logo {
 header div a {
     display: none;
 }
+
+header input {
+    display: none;
+}
+
+header label {
+    font-size: 2rem;
+    color: black;
+    opacity: 0;
+    visibility: hidden;
+}
+
 .home {
     position: relative;
     margin-top: 100px;
@@ -113,11 +125,26 @@ section .paragrph {
 
 @media (max-width:580px) {
     .navbar {
-        display: none;
+        visibility: visible;
+        position: absolute;
+        top: 70%;
+        opacity: 0;
     }
 
-    header div a {
-        display: inline-block;
+    .navbar a {
+        margin: 1rem 0;
+    }
+
+    header label {
+        font-size: 2rem;
+        color: black;
+        opacity: 1;
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    header input:checked ~ .navbar {
+        opacity: 1;
     }
 }
 
@@ -135,5 +162,31 @@ section .paragrph {
     .tfoot {
         display: flex;
         flex-flow: column;
+    }
+}
+
+@media (max-width:400px) {
+    .navbar a {
+        margin: 2px;
+    }
+
+    .btn {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        width: 140px;
+        height: 90px;
+        margin-bottom: 10px;
+        
+    }
+
+    header .navbar img {
+        margin: 0px;
+    }
+
+    #navbar a .sign-in {
+        margin-top: -20px;
     }
 }
